@@ -5,23 +5,18 @@ import java.util.function.Function;
 public class _Function {
     public static void main(String[] args) {
 
-        Function<Integer, Integer> incrementByOneFunction = number -> number++;
-
-        int incriment2 = incrementByOneFunction.apply(1);
-        System.out.println(incriment2);
-
-        int increment = incrementByOne(0);
+        int increment = incrementByOneFunction.apply(1);
         System.out.println(increment);
 
+        int multiplyBy10 = multiplyBy10Function.apply(increment);
+        System.out.println(multiplyBy10);
 
-
-
+        Function<Integer, Integer> addBy1andThenMultiplyBy10 = incrementByOneFunction.andThen(multiplyBy10Function);
+        System.out.println(addBy1andThenMultiplyBy10.apply(1));
 
     }
-
-    static int incrementByOne(int number) {
-        return number +1;
-    }
+    static Function<Integer, Integer> incrementByOneFunction = number -> number + 1;
+    static Function<Integer, Integer> multiplyBy10Function = number -> number*10;
 
 
 }

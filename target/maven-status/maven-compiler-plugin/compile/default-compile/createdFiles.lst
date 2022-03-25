@@ -1,4 +1,7 @@
-imperative\Main.class
+functionalInterface\_Consumer$Customer.class
 imperative\Main$Gender.class
 functionalInterface\_Function.class
 imperative\Main$Person.class
+imperative\Main.class
+functionalInterface\_Predicate.class
+functionalInterface\_Consumer.class
